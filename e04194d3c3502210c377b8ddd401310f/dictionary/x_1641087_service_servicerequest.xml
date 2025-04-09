@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="d4cf6094c3202210c377b8ddd4013148" extends="task" label="ServiceRequest" max_length="40" name="x_1641087_service_servicerequest" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="email" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Scanner" sequence="1" value="scanner"/>
+                <element inactive_on_update="false" label="Email" sequence="3" value="email"/>
+                <element inactive_on_update="false" label="โทรศัพท์มือถือ / Simcard / บริการเสริม" sequence="2" value="mobile"/>
+                <element inactive_on_update="false" label="License" sequence="4" value="license"/>
+                <element inactive_on_update="false" label="Notebook" sequence="0" value="notebook"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="hardware" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Software" sequence="1" value="software"/>
+                <element inactive_on_update="false" label="Hardware" sequence="0" value="hardware"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+    </element>
+</database>
